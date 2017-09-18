@@ -1,0 +1,102 @@
+/******************************************************************************************
+ *	Author: Aron Riesenfeld
+ *	Date:	July 2017
+ *
+ ******************************************************************************************/
+
+* {
+	margin: 0 auto;
+	padding: 0;
+	box-sizing: border-box;
+	overflow: hidden;
+	font-family: "lucida console", monaco, monospace;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	background-color: #1A1A1A;
+	height: 100%;
+}
+
+nav {
+	height: 50px;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+nav a {
+	color: #FF0;
+	font-size:22px;
+	text-decoration: none;
+	margin: auto;
+}
+
+.active {
+	color: #1F1;
+}
+
+a:hover {
+		background: linear-gradient(red, yellow);
+		color: black;
+		border-radius: 5px;
+	}
+	
+	
+.page {
+	height: 90%;
+}
+	
+.titletext {
+	text-align: center;
+	margin-top: 33vh;
+}
+
+.titletext img {
+	width: 67vw;
+}
+
+
+/**************************************************************************************
+*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+*
+*								    404 PAGE STYLES
+*
+*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+***************************************************************************************/
+.error {
+	width: 50vw;
+	height: 50vh;
+	text-align: center;
+	margin-top: 15vh;
+	background-color: #2A2A2A;
+	color: #F55;
+}
+
+.error h1 {
+	margin-top: 18vh;
+	font-size: 3rem;
+}
+/*
+.error h2, a {
+	text-decoration: none;
+	color: #F55;
+	font-size: 2rem;
+	margin-top: 2vh;
+}
+*/
+
+/*****************************************************************************************
+ *****************************************************************************************/
+ 
+.construction {
+	margin-top: 4vh;
+	color: #4B4;
+}
+
+
+
