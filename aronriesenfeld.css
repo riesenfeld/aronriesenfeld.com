@@ -28,11 +28,13 @@ nav {
 	flex-wrap: wrap;
 	justify-content: center;
 }
-
+ a {
+	text-decoration: none;
+	color: black;
+}
 nav a {
 	color: #FF0;
-	font-size:22px;
-	text-decoration: none;
+	font-size: 1.375rem;
 	margin: auto;
 }
 
@@ -61,6 +63,58 @@ a:hover {
 }
 
 
+/**************************************************************************************
+*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+*
+*				                CSS SHOWCASE PAGE STYLES
+*
+*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+***************************************************************************************/
+/*
+.showcase-container {
+	display: grid;
+	grid-gap: 0px;
+	grid-template-columns: 50vw 50vw;
+}
+
+.case {
+	background-color: #F00;
+	height: 20vw;
+}
+ */
+ 
+.showcase-container {
+	display: grid;
+	grid-gap: 0px;
+	grid-template-columns: 50vw 50vw;
+}
+
+.case {
+	color: #000;
+	font-size: 2rem;
+	width: 50vw;
+	height: 47vh;
+	
+	text-align: center;
+	padding-top: 22vh;
+}
+
+.a {
+	background-color: #F55;
+}
+
+.b {
+	background-color: #5F5;
+}
+
+.c {
+	background-color: #55F;
+}
+
+.d {
+	background-color: #F5F;
+}
+    
 /**************************************************************************************
 *@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 *
