@@ -70,18 +70,6 @@ a:hover {
 *
 *@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 ***************************************************************************************/
-/*
-.showcase-container {
-	display: grid;
-	grid-gap: 0px;
-	grid-template-columns: 50vw 50vw;
-}
-
-.case {
-	background-color: #F00;
-	height: 20vw;
-}
- */
  
 .showcase-container {
 	display: grid;
@@ -91,28 +79,28 @@ a:hover {
 
 .case {
 	color: #000;
-	font-size: 2rem;
+	font-size: 1.8rem;
 	width: 50vw;
-	height: 47vh;
+	height: 46.5vh;
 	
 	text-align: center;
 	padding-top: 22vh;
 }
 
 .a {
-	background-color: #F55;
+	background-color: #F99;
 }
 
 .b {
-	background-color: #5F5;
+	background-color: #9F9;
 }
 
 .c {
-	background-color: #55F;
+	background-color: #99F;
 }
 
 .d {
-	background-color: #F5F;
+	background-color: #F9F;
 }
     
 /**************************************************************************************
