@@ -100,8 +100,13 @@ h4 {
 	height: 10vh;
 	width: 40%;
 	padding-top: 5vh;
-	color: #44BB44;
+	color: #9D9;
 	font-size: 0.9rem;
+}
+
+.projects-page > footer > a {
+	color: #1F1;
+	text-decoration: underline;
 }
 
 /*	Borrowing 767px from Bootstrap, which considers small/mobile devices
@@ -113,6 +118,25 @@ h4 {
 	.projects-page > footer {
 		font-size: 0.7rem;
 	}
+}
+
+/**************************************************************************************
+*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+*
+*								    RESUME PAGE STYLES
+*
+*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+***************************************************************************************/
+
+.resume-section {
+	margin: 20vh 20vw 20vh 20vw;
+	color: #9D9;
+	text-align: center;
+}
+
+.resume-section a {
+	color: #1F1;
+	text-decoration: underline;
 }
 
 /**************************************************************************************
