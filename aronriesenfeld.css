@@ -5,72 +5,78 @@
  ******************************************************************************************/
 
 * {
-	margin: 0 auto;
-	padding: 0;
-	box-sizing: border-box;
-	overflow: hidden;
-	font-family: "Raleway", sans-serif;;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  font-family: "Raleway", sans-serif;
 }
 
 html {
-	height: 100%;
+  height: 100%;
 }
 
 body {
-	background-color: #1A1A1A;
-	height: 100%;
+  background-color: #1a1a1a;
+  height: 100%;
 }
 
 nav {
-	height: 7.5vh;
-	width: 100%;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
+  height: 7.5vh;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
- a {
-	text-decoration: none;
-	color: #9D9;
+a {
+  text-decoration: none;
+  color: #9d9;
 }
 nav a {
-	color: #9D9;
-	font-size: 1.375rem;
-	margin: auto;
+  color: #9d9;
+  font-size: 1.375rem;
+  margin: auto;
 }
 
 .active {
-	color: #1F1;
+  color: #1f1;
 }
 
 a:hover {
-	color: #1F1;
+  color: #1f1;
 }
 
 .page {
-	height: 90%;
+  height: 90%;
 }
-	
+
 .titletext {
-	text-align: center;
-	margin-top: 33vh;
+  text-align: center;
+  margin-top: 33vh;
 }
 
 .titletext img {
-	width: 67vw;
+  width: 67vw;
 }
 
 h2 {
-	color: #9D9;
-	font-weight: normal;
-	font-size: 3rem;
-	margin-bottom: 3vh;
+  color: #9d9;
+  font-weight: normal;
+  font-size: 3rem;
+  margin-bottom: 3vh;
 }
 
 h4 {
-	color: #9D9;
-	font-weight: normal;
-	font-size: 2rem;
+  color: #9d9;
+  font-weight: normal;
+  font-size: 2rem;
 }
+
+.below-nav-area {
+  height: 100%;
+  background-color: #2a2a2a;
+}
+
 /**************************************************************************************
 *@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 *
@@ -79,45 +85,40 @@ h4 {
 *@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 ***************************************************************************************/
 
-.projects-page {
-	height: 100%;
-	background-color: #2A2A2A;
-}
-
 .showcase-container {
-	height: 80vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-evenly;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .case {
-	font-size: 1.8rem;
+  font-size: 1.8rem;
 }
 
 .projects-page > footer {
-	float: right;
-	height: 10vh;
-	width: 40%;
-	padding-top: 5vh;
-	color: #9D9;
-	font-size: 0.9rem;
+  float: right;
+  height: 10vh;
+  width: 40%;
+  padding-top: 5vh;
+  color: #9d9;
+  font-size: 0.9rem;
 }
 
 .projects-page > footer > a {
-	color: #1F1;
-	text-decoration: underline;
+  color: #1f1;
+  text-decoration: underline;
 }
 
 /*	Borrowing 767px from Bootstrap, which considers small/mobile devices
 	to be below 768 pixels in width. */
 @media (max-width: 767px) {
-	.case {
-		font-size: 1.2rem;
-	}
-	.projects-page > footer {
-		font-size: 0.7rem;
-	}
+  .case {
+    font-size: 1.2rem;
+  }
+  .projects-page > footer {
+    font-size: 0.7rem;
+  }
 }
 
 /**************************************************************************************
@@ -129,14 +130,14 @@ h4 {
 ***************************************************************************************/
 
 .resume-section {
-	margin: 20vh 20vw 20vh 20vw;
-	color: #9D9;
-	text-align: center;
+  margin: 20vh 20vw 20vh 20vw;
+  color: #9d9;
+  text-align: center;
 }
 
 .resume-section a {
-	color: #1F1;
-	text-decoration: underline;
+  color: #1f1;
+  text-decoration: underline;
 }
 
 /**************************************************************************************
@@ -148,33 +149,30 @@ h4 {
 ***************************************************************************************/
 
 .error {
-	width: 50vw;
-	height: 50vh;
-	margin-top: 15vh;
-	text-align: center;
-	background-color: #2A2A2A;
+  width: 50vw;
+  height: 50vh;
+  margin-top: 15vh;
+  text-align: center;
+  background-color: #2a2a2a;
 }
 
 .error h2 {
-	margin-top: 15vh;
-	color: #F55;
+  margin-top: 15vh;
+  color: #f55;
 }
 
 .error h3 {
-	color: #F55;
+  color: #f55;
 }
 
 @media (max-width: 767px) {
-	.error h2 {
-		font-size: 2rem;
-	}
-	.error h3 {
-		font-size: 1rem;
-	}
+  .error h2 {
+    font-size: 2rem;
+  }
+  .error h3 {
+    font-size: 1rem;
+  }
 }
 
 /*****************************************************************************************
  *****************************************************************************************/
-
-
-
