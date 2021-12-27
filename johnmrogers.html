@@ -29,7 +29,7 @@
       </p>
     </div>
     <div id="container">
-      <main id="poem-area">
+      <main id="poem-area" class="container-item">
         <!-- <div> -->
         <img
           id="poem-image"
@@ -38,7 +38,7 @@
         />
         <!-- </div> -->
       </main>
-      <div id="poem-list-area">
+      <div id="poem-list-area" class="container-item">
         <ul id="poem-list">
           <li class="poem-list-element" onclick="swapPoem(this)" value="0">A Letter (1942)</li>
           <li class="poem-list-element" onclick="swapPoem(this)" value="1">
@@ -178,47 +178,46 @@
     * {
       color: #9d9;
     }
-    #container {
-      display: flex;
-      height: 70vh;
-      width: 80vw;
-      margin-left: 10vw;
-    }
-    #poem-area {
-      width: 40vw;
-    }
     #brief {
       height: 20vh;
       padding: 2vh 2vw 0vh 2vw;
-      /* display: flex; */
-      /* align-content: center; */
     }
     #brief p {
-      font-size: 2.5vh;
+      font-size: 2.2vh;
+    }
+    #container {
+      display: flex;
+      justify-content: space-around;
+      height: 70vh;
+      width: 70vw;
+      margin-left: 30vw;
+    }
+    .container-item {
+      margin: 0;
     }
     #poem-image {
-      height: 80vh; /* 100vh - <nav> height - #brief height (2 padding) - 0.5vh gutter at bottom*/
+      height: 70vh; /* 100vh - <nav> height - #brief height (2 padding) - 0.5vh gutter at bottom*/
     }
-    #poem-list-area {
-      display: flex;
-      align-items: center;
-    }
+
     .poem-list-element {
       cursor: pointer;
-    }
-    /* Add a dot after every list element */
-    .poem-list-element:after {
-      content: " \00b7";
-    }
-    /* Except for the last */
-    .poem-list-element:last-child:after {
-      content: none;
+      font-size: 2.6vh;
     }
     .poem-list-element:hover,
     .poem-list-element:focus {
       color: #6a6;
     }
-
+    /* For landscape resolutions that are almost square */
+    @media screen and (max-aspect-ratio: 5/4) {
+      #container {
+        width: 80vw;
+        margin-left: 20vw;
+      }
+      .poem-list-element {
+        font-size: 2vw;
+      }
+    }
+    /* For portrait resolutions */
     @media (orientation: portrait) {
       #brief {
         height: fit-content;
@@ -244,6 +243,14 @@
       .poem-list-element {
         display: inline;
         font-size: 1.8vw;
+      }
+      /* Add a dot after every list element */
+      .poem-list-element:after {
+        content: " \00b7";
+      }
+      /* Except for the last */
+      .poem-list-element:last-child:after {
+        content: none;
       }
       #poem-area {
         width: 80vw;
