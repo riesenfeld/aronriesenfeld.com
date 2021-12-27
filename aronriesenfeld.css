@@ -99,8 +99,8 @@ h4 {
 .projects-page > footer {
   float: right;
   height: 10vh;
-  width: 40%;
   padding-top: 5vh;
+  margin-right: 2vw;
   color: #9d9;
   font-size: 0.9rem;
 }
