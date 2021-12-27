@@ -361,6 +361,7 @@
     }
     #poem-image {
       height: 70vh; /* 100vh - <nav> height - #brief height (2 padding) - 0.5vh gutter at bottom*/
+      /* width: auto; */
     }
     .poem-list-element {
       cursor: pointer;
@@ -392,6 +393,7 @@
       #container {
         flex-direction: column-reverse;
         justify-content: flex-end; /* Because we're reversing flow */
+        align-items: center; /* Center the items in the flex track */
         width: 90vw;
         height: fit-content;
         margin-left: 5vw;
