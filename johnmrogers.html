@@ -18,6 +18,7 @@
       <a href="#" class="active">Rogers Poetry</a>
     </nav>
     <div class="below-nav-area">
+      <h3 id="poetry-title">Rays From a Warm Heart: The Poetry of John Michael Rogers</h3>
       <div id="brief">
         <p>
           Presented here is a selection of poetry written by my grandfather, John Michael Rogers, a
@@ -342,6 +343,12 @@
     * {
       color: #9d9;
     }
+    #poetry-title {
+      margin-top: 1.5vh;
+      /* height: 5vh; */
+      /* font-size: 3.5vh; */
+      text-align: center;
+    }
     #brief {
       height: 20vh;
       padding: 2vh 2vw 0vh 2vw;
@@ -352,7 +359,8 @@
     #container {
       display: flex;
       justify-content: space-around;
-      height: 70vh;
+      height: 65vh;
+      /* 100vh - <nav> height - #brief height (2 padding) - <h3> (a little under 5vh) - 0.5vh gutter at bottom*/
       width: 70vw;
       margin-left: 30vw;
     }
@@ -360,12 +368,11 @@
       margin: 0;
     }
     #poem-image {
-      height: 70vh; /* 100vh - <nav> height - #brief height (2 padding) - 0.5vh gutter at bottom*/
-      /* width: auto; */
+      height: 65vh;
     }
     .poem-list-element {
       cursor: pointer;
-      font-size: 2.6vh;
+      font-size: 2.5vh;
     }
     .poem-list-element:hover,
     .poem-list-element:focus {
@@ -383,6 +390,9 @@
     }
     /* For portrait resolutions */
     @media (orientation: portrait) {
+      #poetry-title {
+        font-size: 3vw;
+      }
       #brief {
         height: fit-content;
         margin-bottom: 1vh;
@@ -403,7 +413,8 @@
       }
       #poem-list {
         list-style: none;
-        height: fit-content;
+        /* height: fit-content; */
+        /* max-height: fit-content; */
       }
       .poem-list-element {
         display: inline;
@@ -423,7 +434,7 @@
         height: fit-content;
       }
       #poem-image {
-        height: 58vh;
+        height: 56vh;
       }
     }
   </style>
