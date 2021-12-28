@@ -33,17 +33,13 @@
       <div id="container">
         <main id="poem-area" class="container-item">
           <!-- <div> -->
-          <img
-            id="poem-image"
-            src="johnmrogers_images/A_Tribute_To_The_Sun.gif"
-            alt="image of poem"
-          />
+          <img id="poem-image" src="johnmrogers_images/A_Letter.gif" alt="image of poem" />
           <!-- </div> -->
         </main>
         <div id="poem-list-area" class="container-item">
           <ul id="poem-list">
             <li
-              class="poem-list-element"
+              class="poem-list-element active-poem"
               tabindex="0"
               onclick="swapPoem(event)"
               onkeydown="swapPoem(event)"
@@ -333,9 +329,14 @@
     /**      Functions      **/
     /*************************/
 
+    var makeActive = function (li) {
+      document.getElementsByClassName("active-poem")[0].classList.remove("active-poem")
+      li.classList.add("active-poem")
+    }
     var swapPoem = function (e) {
       if ((e.type == "keydown" && e.key == "Enter") || e.type == "click") {
         document.getElementById("poem-image").src = slug + photos[e.currentTarget.value].path
+        makeActive(e.currentTarget)
       }
     }
   </script>
@@ -376,6 +377,9 @@
     }
     .poem-list-element:hover,
     .poem-list-element:focus {
+      color: #1f1;
+    }
+    .active-poem {
       color: #1f1;
     }
     /* For landscape resolutions that are almost square */
