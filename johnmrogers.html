@@ -33,7 +33,12 @@
       <div id="container">
         <main id="poem-area" class="container-item">
           <!-- <div> -->
-          <img id="poem-image" src="johnmrogers_images/A_Letter.gif" alt="image of poem" />
+          <img
+            id="poem-image"
+            src="johnmrogers_images/A_Letter.gif"
+            alt="image of poem"
+            onclick="expandImage(this)"
+          />
           <!-- </div> -->
         </main>
         <div id="poem-list-area" class="container-item">
@@ -339,6 +344,11 @@
         makeActive(e.currentTarget)
       }
     }
+    var expandImage = function (img) {
+      if (!img.className.includes("image-enlarged")) {
+        img.classList.add("image-enlarged")
+      }
+    }
   </script>
   <style>
     * {
@@ -346,8 +356,6 @@
     }
     #poetry-title {
       margin-top: 1.5vh;
-      /* height: 5vh; */
-      /* font-size: 3.5vh; */
       text-align: center;
     }
     #brief {
@@ -358,17 +366,34 @@
       font-size: 2.2vh;
     }
     #container {
-      display: flex;
-      justify-content: space-around;
       height: 65vh;
       /* 100vh - <nav> height - #brief height (2 padding) - <h3> (a little under 5vh) - 0.5vh gutter at bottom*/
-      width: 70vw;
-      margin-left: 30vw;
+      width: 100vw;
     }
     .container-item {
       margin: 0;
+      position: absolute;
+    }
+    #poem-area {
+      display: flex;
+      justify-content: center;
+      height: fit-content;
+      width: 100vw;
     }
     #poem-image {
+      height: 65vh;
+      transition-duration: 1s;
+    }
+    #poem-image.image-enlarged {
+      position: absolute;
+      bottom: 100vh;
+      left: 30vw;
+      z-index: 10;
+      transform: translateY(-20vh);
+    }
+    #poem-list-area {
+      right: 0vw;
+      width: 30vw;
       height: 65vh;
     }
     .poem-list-element {
@@ -384,12 +409,10 @@
     }
     /* For landscape resolutions that are almost square */
     @media screen and (max-aspect-ratio: 5/4) {
-      #container {
-        width: 80vw;
-        margin-left: 20vw;
-      }
       .poem-list-element {
-        font-size: 2vw;
+        font-size: 1.8vw;
+        text-align: right;
+        width: fit-content;
       }
     }
     /* For portrait resolutions */
@@ -405,6 +428,7 @@
         font-size: 2.2vw;
       }
       #container {
+        display: flex;
         flex-direction: column-reverse;
         justify-content: flex-end; /* Because we're reversing flow */
         align-items: center; /* Center the items in the flex track */
@@ -412,13 +436,18 @@
         height: fit-content;
         margin-left: 5vw;
       }
+      .container-item {
+        display: unset;
+        position: unset;
+      }
       #poem-list-area {
+        width: unset;
+        height: unset;
+        right: unset;
         margin-bottom: 1.5vh;
       }
       #poem-list {
         list-style: none;
-        /* height: fit-content; */
-        /* max-height: fit-content; */
       }
       .poem-list-element {
         display: inline;
@@ -433,8 +462,9 @@
         content: none;
       }
       #poem-area {
+        /* display: flex; */
+        justify-content: unset;
         width: 80vw;
-        display: flex;
         height: fit-content;
       }
       #poem-image {
