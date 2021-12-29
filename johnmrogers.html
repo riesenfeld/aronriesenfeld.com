@@ -385,11 +385,8 @@
       transition-duration: 1s;
     }
     #poem-image.image-enlarged {
-      position: absolute;
-      bottom: 100vh;
-      left: 30vw;
-      z-index: 10;
-      transform: translateY(-20vh);
+      position: fixed;
+      transform: translateY(-15vh) scale(1.35);
     }
     #poem-list-area {
       right: 0vw;
@@ -461,14 +458,18 @@
       .poem-list-element:last-child:after {
         content: none;
       }
-      #poem-area {
-        /* display: flex; */
-        justify-content: unset;
-        width: 80vw;
-        height: fit-content;
-      }
       #poem-image {
         height: 56vh;
+      }
+      #poem-image.image-enlarged {
+        position: fixed;
+        transform: translateY(-15vh) scale(1.3);
+      }
+    }
+    @media screen and (max-aspect-ratio: 5/4) {
+      #poem-image.image-enlarged {
+        position: fixed;
+        transform: translateY(-15vh) scale(1.15);
       }
     }
   </style>
