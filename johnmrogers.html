@@ -12,14 +12,17 @@
     <title>The Poetry of John Michael Rogers</title>
   </head>
   <body>
-    <nav>
+    <div id="enlarged-image-background"></div>
+    <nav class="blurrable">
       <a href="index.html">Home</a>
       <a href="projects.html">Projects</a>
       <a href="#" class="active">Rogers Poetry</a>
     </nav>
     <div class="below-nav-area">
-      <h3 id="poetry-title">Rays From a Warm Heart: The Poetry of John Michael Rogers</h3>
-      <div id="brief">
+      <h3 id="poetry-title" class="blurrable">
+        Rays From a Warm Heart: The Poetry of John Michael Rogers
+      </h3>
+      <div id="brief" class="blurrable">
         <p>
           Presented here is a selection of poetry written by my grandfather, John Michael Rogers, a
           former academic at Cal State San Jose. Most of the poetry contained herein was written
@@ -41,7 +44,7 @@
           />
           <!-- </div> -->
         </main>
-        <div id="poem-list-area" class="container-item">
+        <div id="poem-list-area" class="container-item blurrable">
           <ul id="poem-list">
             <li
               class="poem-list-element active-poem"
@@ -348,6 +351,13 @@
       if (!img.className.includes("image-enlarged")) {
         img.classList.add("image-enlarged")
       }
+      if (!document.getElementById("enlarged-image-background").className.includes("enlarged")) {
+        document.getElementById("enlarged-image-background").classList.add("enlarged")
+      }
+      let blurrables = document.getElementsByClassName("blurrable")
+      for (let i = 0; i < blurrables.length; i++) {
+        blurrables.item(i).classList.add("blurred-text")
+      }
     }
   </script>
   <style>
@@ -387,6 +397,20 @@
     #poem-image.image-enlarged {
       position: fixed;
       transform: translateY(-15vh) scale(1.35);
+      z-index: 3;
+    }
+    #enlarged-image-background {
+      transition-duration: 1s;
+    }
+    #enlarged-image-background.enlarged {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0.5, 0.5, 0.5, 0.5);
+      z-index: 2;
+    }
+    .blurred-text {
+      filter: blur(1.5px);
     }
     #poem-list-area {
       right: 0vw;
@@ -466,7 +490,8 @@
         transform: translateY(-15vh) scale(1.3);
       }
     }
-    @media screen and (max-aspect-ratio: 5/4) {
+    /*Slightly larger than an iPhone X */
+    @media screen and (max-aspect-ratio: 25/54) {
       #poem-image.image-enlarged {
         position: fixed;
         transform: translateY(-15vh) scale(1.15);
