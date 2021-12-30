@@ -424,6 +424,9 @@
       background-color: rgba(0.5, 0.5, 0.5, 0.5);
       z-index: 2;
     }
+    .blurrable {
+      transition-duration: 1s;
+    }
     .blurred-text {
       filter: blur(1.5px);
     }
@@ -502,21 +505,20 @@
         content: none;
       }
       #poem-area {
-        height: 56vh;
+        height: 44vh;
       }
       #poem-image {
-        height: 56vh;
+        height: 44vh;
       }
       #poem-image.image-enlarged {
         position: fixed;
-        transform: translateY(-15vh) scale(1.3);
+        transform: translateY(-15vh) scale(1.6);
       }
       .click-to-enlarge-message {
         font-size: 1.4vh;
       }
     }
-    /* The size of a Surface Duo */
-    @media screen and (min-aspect-ratio: 3/4) and (orientation: portrait) {
+    @media screen and (max-aspect-ratio: 3/5) and (orientation: portrait) {
       #poem-area {
         height: 44vh;
       }
@@ -525,10 +527,7 @@
       }
       #poem-image.image-enlarged {
         position: fixed;
-        transform: translateY(-20vh) scale(1.6);
-      }
-      .click-to-enlarge-message {
-        font-size: 1.4vh;
+        transform: translateY(-12vh) scale(1.6);
       }
     }
 
@@ -536,7 +535,7 @@
     @media screen and (max-aspect-ratio: 25/54) {
       #poem-image.image-enlarged {
         position: fixed;
-        transform: translateY(-15vh) scale(1.15);
+        transform: translateY(-12vh) scale(1.3);
       }
     }
   </style>
