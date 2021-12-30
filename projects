@@ -13,7 +13,7 @@
   </head>
   <body>
     <nav>
-      <a href="index">Home</a>
+      <a href="index.html">Home</a>
       <a href="#" class="active">Projects</a>
       <a href="johnmrogers">Rogers Poetry</a>
     </nav>
