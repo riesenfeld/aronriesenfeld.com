@@ -13,9 +13,9 @@
   </head>
   <body>
     <nav>
-      <a href="index.html">Home</a>
+      <a href="index">Home</a>
       <a href="#" class="active">Projects</a>
-      <a href="johnmrogers.html">Rogers Poetry</a>
+      <a href="johnmrogers">Rogers Poetry</a>
     </nav>
 
     <div class="projects-page below-nav-area">
