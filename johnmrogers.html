@@ -12,7 +12,7 @@
     <title>The Poetry of John Michael Rogers</title>
   </head>
   <body>
-    <div id="enlarged-image-background"></div>
+    <div id="enlarged-image-background" onclick="reduceImage(this)"></div>
     <nav class="blurrable">
       <a href="index.html">Home</a>
       <a href="projects.html">Projects</a>
@@ -359,6 +359,19 @@
         blurrables.item(i).classList.add("blurred-text")
       }
     }
+    var reduceImage = function (background) {
+      if (background.className.includes("enlarged")) {
+        /* Remove the shaded background */
+        background.classList.remove("enlarged")
+        /* Reduce the image size */
+        document.getElementById("poem-image").classList.remove("image-enlarged")
+        /* Unblur the text */
+        let blurrables = document.getElementsByClassName("blurrable")
+        for (let i = 0; i < blurrables.length; i++) {
+          blurrables.item(i).classList.remove("blurred-text")
+        }
+      }
+    }
   </script>
   <style>
     * {
@@ -391,8 +404,11 @@
       width: 100vw;
     }
     #poem-image {
+      /* Not sure why this doesn't take the image out of document flow, but it works */
+      position: fixed;
       height: 65vh;
       transition-duration: 1s;
+      z-index: 3;
     }
     #poem-image.image-enlarged {
       position: fixed;
