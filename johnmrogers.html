@@ -7,6 +7,7 @@
 
     <link rel="icon" href="icon.png" />
     <link rel="stylesheet" href="aronriesenfeld.css" />
+    <link rel="stylesheet" href="johnmrogers.css" />
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" />
 
     <title>The Poetry of John Michael Rogers | Aron Riesenfeld</title>
@@ -18,7 +19,7 @@
       <a href="projects.html">Projects</a>
       <a href="#" class="active">Rogers Poetry</a>
     </nav>
-    <div class="below-nav-area">
+    <div class="below-nav-area poetry-page">
       <h3 id="poetry-title" class="blurrable">Rays From a Warm Heart: The Poetry of John Michael Rogers</h3>
       <div id="brief" class="blurrable">
         <p>
@@ -194,174 +195,4 @@
       }
     }
   </script>
-  <style>
-    * {
-      color: #8c8;
-    }
-    #poetry-title {
-      margin-top: 1.5vh;
-      text-align: center;
-    }
-    #brief {
-      height: 20vh;
-      padding: 2vh 2vw 0vh 2vw;
-    }
-    #brief p {
-      font-size: 2.2vh;
-    }
-    #container {
-      height: 65vh;
-      /* 100vh - <nav> height - #brief height (2 padding) - <h3> (a little under 5vh) - 0.5vh gutter at bottom*/
-      width: 100vw;
-    }
-    .container-item {
-      margin: 0;
-      position: absolute;
-    }
-    #poem-area {
-      display: flex;
-      justify-content: center;
-      height: fit-content;
-      width: 100vw;
-    }
-    #poem-image {
-      /* Not sure why this doesn't take the image out of document flow, but it works */
-      position: fixed;
-      height: 65vh;
-      transition-duration: 1s;
-      z-index: 3;
-    }
-    #poem-image.image-enlarged {
-      position: fixed;
-      transform: translateY(-15vh) scale(1.35);
-      z-index: 3;
-    }
-    #enlarged-image-background {
-      transition-duration: 1s;
-    }
-    #enlarged-image-background.enlarged {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0.5, 0.5, 0.5, 0.5);
-      z-index: 2;
-    }
-    .blurrable {
-      transition-duration: 1s;
-    }
-    .blurred-text {
-      filter: blur(1.5px);
-    }
-    #poem-list-area {
-      right: 0vw;
-      width: 30vw;
-      height: 65vh;
-    }
-    .poem-list-element {
-      cursor: pointer;
-      font-size: 2.5vh;
-    }
-    .poem-list-element:hover,
-    .poem-list-element:focus {
-      color: #1f1;
-    }
-    .active-poem {
-      color: #1f1;
-    }
-    .click-to-enlarge-message {
-      text-align: center;
-      font-size: 1.6vh;
-    }
-    /* For landscape resolutions that are almost square */
-    @media screen and (max-aspect-ratio: 5/4) {
-      .poem-list-element {
-        font-size: 1.8vw;
-        text-align: right;
-        width: fit-content;
-      }
-    }
-    /* For portrait resolutions */
-    @media (orientation: portrait) {
-      * {
-        color: #9d9;
-      }
-      #poetry-title {
-        font-size: 3vw;
-      }
-      #brief {
-        height: fit-content;
-        margin-bottom: 1vh;
-      }
-      #brief p {
-        font-size: 2.2vw;
-      }
-      #container {
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: flex-end; /* Because we're reversing flow */
-        align-items: center; /* Center the items in the flex track */
-        width: 90vw;
-        height: fit-content;
-        margin-left: 5vw;
-      }
-      .container-item {
-        display: unset;
-        position: unset;
-      }
-      #poem-list-area {
-        width: unset;
-        height: unset;
-        right: unset;
-        margin-bottom: 1.5vh;
-      }
-      #poem-list {
-        list-style: none;
-      }
-      .poem-list-element {
-        display: inline;
-        font-size: 1.8vw;
-      }
-      /* Add 2 spaces and a dot after every list element */
-      .poem-list-element:after {
-        content: "\00a0\00a0\00b7";
-      }
-      /* Except for the last */
-      .poem-list-element:last-child:after {
-        content: none;
-      }
-      #poem-area {
-        height: 44vh;
-      }
-      #poem-image {
-        height: 44vh;
-      }
-      #poem-image.image-enlarged {
-        position: fixed;
-        transform: translateY(-15vh) scale(1.6);
-      }
-      .click-to-enlarge-message {
-        font-size: 1.4vh;
-      }
-    }
-    @media screen and (max-aspect-ratio: 3/5) and (orientation: portrait) {
-      #poem-area {
-        height: 44vh;
-      }
-      #poem-image {
-        height: 44vh;
-      }
-      #poem-image.image-enlarged {
-        position: fixed;
-        transform: translateY(-12vh) scale(1.6);
-      }
-    }
-
-    /*Slightly larger than an iPhone X */
-    @media screen and (max-aspect-ratio: 25/54) {
-      #poem-image.image-enlarged {
-        position: fixed;
-        transform: translateY(-12vh) scale(1.3);
-      }
-    }
-  </style>
 </html>
