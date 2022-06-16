@@ -139,6 +139,7 @@ h4 {
 @media (max-width: 767px) {
   .case {
     font-size: 1.3rem;
+    margin-top: 16px;
   }
   .case .subtitle {
     font-size: 0.8rem;
