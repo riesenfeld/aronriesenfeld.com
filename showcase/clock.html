@@ -5,9 +5,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" , width="device-width" , user-scalable="yes" />
 
-    <!-- Plausible Analytics integration -->
-    <script defer data-domain="aronriesenfeld.com" src="https://plausible.io/js/plausible.js"></script>
-
     <title>Hex Code Color Clock | Aron Riesenfeld</title>
   </head>
   <body>
@@ -29,7 +26,7 @@
         text-align: center;
         margin-top: 20vh;
         font-size: 3.2rem;
-        font-family: "Courier New", "Courier", "sans-serif";
+        font-family: 'Courier New', 'Courier', 'sans-serif';
         font-weight: 200;
       }
     </style>
@@ -46,23 +43,23 @@
         let cm = ((m + 128) % 256).toString(16)
         let cs = ((s + 128) % 256).toString(16)
 
-        let time = "#" + prependZero(h) + prependZero(m) + prependZero(s)
-        let complement = "#" + prependZero(ch) + prependZero(cm) + prependZero(cs)
-        let clock = document.getElementsByClassName("clock")[0]
-        clock.innerHTML = "" + time
+        let time = '#' + prependZero(h) + prependZero(m) + prependZero(s)
+        let complement = '#' + prependZero(ch) + prependZero(cm) + prependZero(cs)
+        let clock = document.getElementsByClassName('clock')[0]
+        clock.innerHTML = '' + time
         setColor(time, complement, clock)
       }
 
       function prependZero(t) {
         let s = t.toString()
         if (t < 10) {
-          s = "0" + t
+          s = '0' + t
         }
         return s
       }
 
       function setColor(time, complement, clock) {
-        let body = document.getElementsByTagName("body")[0]
+        let body = document.getElementsByTagName('body')[0]
         body.style.backgroundColor = time
         clock.style.color = complement
       }
