@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="johnmrogers.css" />
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" />
 
+    <!-- Plausible Analytics integration -->
+    <script defer data-domain="aronriesenfeld.com" src="https://plausible.io/js/plausible.js"></script>
+
     <title>The Poetry of John Michael Rogers | Aron Riesenfeld</title>
   </head>
   <body>
@@ -67,91 +70,91 @@
     /**        Data        **/
     /************************/
 
-    const slug = "johnmrogers_images/"
+    const slug = 'johnmrogers_images/'
     const photos = [
       {
-        name: "A Letter",
-        path: "A_Letter.gif",
+        name: 'A Letter',
+        path: 'A_Letter.gif',
       },
       {
         name: "A Lover's Wish",
         path: "A_Lover's_Wish.gif",
       },
       {
-        name: "A Neighbor",
-        path: "A_Neighbor.gif",
+        name: 'A Neighbor',
+        path: 'A_Neighbor.gif',
       },
       {
-        name: "A Tribute to the Sun",
-        path: "A_Tribute_To_The_Sun.gif",
+        name: 'A Tribute to the Sun',
+        path: 'A_Tribute_To_The_Sun.gif',
       },
       {
-        name: "Billings U",
-        path: "Billings_U.gif",
+        name: 'Billings U',
+        path: 'Billings_U.gif',
       },
       {
-        name: "Consolation",
-        path: "Consolation.gif",
+        name: 'Consolation',
+        path: 'Consolation.gif',
       },
       {
-        name: "Contemplation",
-        path: "Contemplation.gif",
+        name: 'Contemplation',
+        path: 'Contemplation.gif',
       },
       {
-        name: "Cremation",
-        path: "Cremation.gif",
+        name: 'Cremation',
+        path: 'Cremation.gif',
       },
       {
-        name: "Dearest Bob",
-        path: "Dearest_Bob.gif",
+        name: 'Dearest Bob',
+        path: 'Dearest_Bob.gif',
       },
       {
-        name: "Dearly Beloved",
-        path: "Dearly_Beloved.gif",
+        name: 'Dearly Beloved',
+        path: 'Dearly_Beloved.gif',
       },
       {
-        name: "Eventide",
-        path: "Eventide.gif",
+        name: 'Eventide',
+        path: 'Eventide.gif',
       },
       {
-        name: "Every Artist",
-        path: "Every_Artist.gif",
+        name: 'Every Artist',
+        path: 'Every_Artist.gif',
       },
       {
-        name: "Frances",
-        path: "Frances.gif",
+        name: 'Frances',
+        path: 'Frances.gif',
       },
       {
-        name: "Gardenia",
-        path: "Gardenia.gif",
+        name: 'Gardenia',
+        path: 'Gardenia.gif',
       },
       {
-        name: "Goodnight My Little One",
-        path: "Goodnight_My_Little_One.gif",
+        name: 'Goodnight My Little One',
+        path: 'Goodnight_My_Little_One.gif',
       },
       {
-        name: "Loneliness",
-        path: "Loneliness.gif",
+        name: 'Loneliness',
+        path: 'Loneliness.gif',
       },
       {
-        name: "Missing You",
-        path: "Missing_You.gif",
+        name: 'Missing You',
+        path: 'Missing_You.gif',
       },
       {
-        name: "My Darling",
-        path: "My_Darling.gif",
+        name: 'My Darling',
+        path: 'My_Darling.gif',
       },
       {
-        name: "Needing You",
-        path: "Needing_You.gif",
+        name: 'Needing You',
+        path: 'Needing_You.gif',
       },
       {
-        name: "Prayer 1941",
-        path: "Prayer_1941.gif",
+        name: 'Prayer 1941',
+        path: 'Prayer_1941.gif',
       },
       {
-        name: "Thinking",
-        path: "Thinking.gif",
+        name: 'Thinking',
+        path: 'Thinking.gif',
       },
     ]
 
@@ -160,37 +163,37 @@
     /*************************/
 
     var makeActive = function (li) {
-      document.getElementsByClassName("active-poem")[0].classList.remove("active-poem")
-      li.classList.add("active-poem")
+      document.getElementsByClassName('active-poem')[0].classList.remove('active-poem')
+      li.classList.add('active-poem')
     }
     var swapPoem = function (e) {
-      if ((e.type == "keydown" && e.key == "Enter") || e.type == "click") {
-        document.getElementById("poem-image").src = slug + photos[e.currentTarget.value].path
+      if ((e.type == 'keydown' && e.key == 'Enter') || e.type == 'click') {
+        document.getElementById('poem-image').src = slug + photos[e.currentTarget.value].path
         makeActive(e.currentTarget)
       }
     }
     var expandImage = function (img) {
-      if (!img.className.includes("image-enlarged")) {
-        img.classList.add("image-enlarged")
+      if (!img.className.includes('image-enlarged')) {
+        img.classList.add('image-enlarged')
       }
-      if (!document.getElementById("enlarged-image-background").className.includes("enlarged")) {
-        document.getElementById("enlarged-image-background").classList.add("enlarged")
+      if (!document.getElementById('enlarged-image-background').className.includes('enlarged')) {
+        document.getElementById('enlarged-image-background').classList.add('enlarged')
       }
-      let blurrables = document.getElementsByClassName("blurrable")
+      let blurrables = document.getElementsByClassName('blurrable')
       for (let i = 0; i < blurrables.length; i++) {
-        blurrables.item(i).classList.add("blurred-text")
+        blurrables.item(i).classList.add('blurred-text')
       }
     }
     var reduceImage = function (background) {
-      if (background.className.includes("enlarged")) {
+      if (background.className.includes('enlarged')) {
         /* Remove the shaded background */
-        background.classList.remove("enlarged")
+        background.classList.remove('enlarged')
         /* Reduce the image size */
-        document.getElementById("poem-image").classList.remove("image-enlarged")
+        document.getElementById('poem-image').classList.remove('image-enlarged')
         /* Unblur the text */
-        let blurrables = document.getElementsByClassName("blurrable")
+        let blurrables = document.getElementsByClassName('blurrable')
         for (let i = 0; i < blurrables.length; i++) {
-          blurrables.item(i).classList.remove("blurred-text")
+          blurrables.item(i).classList.remove('blurred-text')
         }
       }
     }
